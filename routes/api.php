@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+/* Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+ */
+//possono esistere controller uguali ma con percorsi diversi
+ Route::get('/posts', 'Api\PostController@index')->name('api.posts.index');
