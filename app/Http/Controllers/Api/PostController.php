@@ -15,8 +15,8 @@ class PostController extends Controller
      */
     public function index(Request $request)
     {
-        $per_page = $request->query('per_page', 2);
-        if ($per_page < 1 || $per_page > 5){
+        $per_page = $request->query('per_page', 12);
+        if ($per_page < 1 || $per_page > 100){
             return response()->json(['success' => false], 400);
         }
         $posts = Post::with('user')->with('category')->with('tags')->paginate($per_page);
