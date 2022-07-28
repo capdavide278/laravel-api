@@ -1,5 +1,5 @@
 require('./bootstrap');
-import bootstrap from 'bootstrap';
+/* import bootstrap from 'bootstrap'; */
 
 const eleOverlay = document.querySelector('.overlay');
 if (eleOverlay) {
